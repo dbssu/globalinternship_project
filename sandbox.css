@@ -1,0 +1,16 @@
+body {
+  font-family: 'Avenir Next', 'Helvetica Neue', sans-serif;
+  margin: 0;
+}
+
+.item {
+  height: 2000px;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  text-align: center;
+  color: #ffff;
+}
+.drawer-brand{
+  font-family: 'mini-wakuwaku';
+  color: #ff9b05;
+}

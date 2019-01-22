@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <title>あしあと</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--팝업창-->
+  <meta name="Description" content="" />
+  <meta name="Keywords"  content="" />
+  <link rel="stylesheet" type="text/css" media="screen,print" href="style.css" />
+  <link href="sandbox.css" rel="stylesheet">
+  <link href="drawer.css" rel="stylesheet">
+  <style>
+    .drawer-brand{
+      font-family: 'mini-wakuwaku';
+      font-size: 20px;
+      font-weight: 100;
+      color: #ff9b05;
+    }
+    .mainn{
+      background-image:url('mission1.png');
+      background-repeat: no-repeat;
+      background-size: 376px 620px;
+    }
+    .select{
+        position: absolute;
+        top: 580px;
+        left: 100px;
+        background-color: #ff9b05;
+        border: none;
+        color: white;
+        padding: 10px 30px;
+        text-align: center;
+        display: inline-block;
+        font-size: 13px;
+        margin: 2px 2px;
+        border-radius: 12px;
+        font-family: 'MS Gothic';
+    }
+    .popup{
+      font-family: 'MS Gothic';
+      font-size: 11px;
+      padding: 25px 25px;
+    }
+    .strong{
+      color: #ff9b05;
+      font-size: 15px;
+    }
+    .popup_txt{
+      color: darkgrey;
+      font-weight: 100;
+      font-size: 10px;
+    }
+    .passwd{
+      margin: 3px 2px;
+      padding: 4px 1px;
+    }
+    .submit{
+      position: absolute;
+      background-color: #ff9b05;
+      border-radius: 3px;
+      font-family: 'MS Gothic';
+      font-size: 12px;
+      border: none;
+      color: white;
+      padding: 7px 7px;
+      top: 110px;
+    }
+
+  </style>
+</head>
+<body class="drawer drawer--left drawer--navbarTopGutter">
+  <header class="drawer-navbar drawer-navbar--fixed" role="banner">
+    <div class="drawer-container">
+      <div class="drawer-navbar-header">
+        <a class="drawer-brand" href="./index.html">あしあと</a>
+        <button type="button" class="drawer-toggle drawer-hamburger">
+          <span class="sr-only">toggle navigation</span>
+          <span class="drawer-hamburger-icon"></span>
+        </button>
+      </div>
+
+      <nav class="drawer-nav" role="navigation">
+        <ul class="drawer-menu">
+          <li><a class="drawer-menu-item" href="./mission_chk.html">ミッション確認 (미션확인)</a></li>
+          <li><a class="drawer-menu-item" href="./infomation.html">利用案内 (설명서)</a></li>
+          <li><a class="drawer-menu-item" href="./index.html">地図 (지도)</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- content -->
+  <main role="main" class="mainn">
+    <section class="item">
+    </section>
+    <a rel="leanModal" href="#modal-window">
+    <button class="select">ミッション完了</button>
+    </a>
+
+    <!--팝업창-->
+    <div id="modal-window">
+        <div class="modal_close"></div>
+        <div class="popup"><strong class="strong">関係者!</strong>
+        <br><initial class="popup_txt">ミッションを確認してください</initial></div>
+        <form id="passform" action="">
+          <input type="password" class="passwd" id="passwd" value="">
+          <input type="submit" class="submit" id="submit" value="はい">
+      </form>
+    </div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="drawer.min.js" charset="utf-8"></script>
+  <script>
+    $(document).ready(function() {
+      $('.drawer').drawer();
+    });
+  </script>
+  
+  <!--팝업창 script-->
+  <!--<script type="text/javascript" src="http://jsdo.it/lib/jquery-2.1.0/js"></script>-->
+  <script type="text/javascript" src="check.js"></script>
+  <scriopt type="text/javascript" src="mission_chk.js"></scriopt>
+</body>
+</html>
