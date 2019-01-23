@@ -26,7 +26,7 @@
     .select{
         position: absolute;
         top: 580px;
-        left: 100px;
+        left: 110px;
         background-color: #ff9b05;
         border: none;
         color: white;
@@ -73,6 +73,7 @@
     }
 
   </style>
+  <scriopt type="text/javascript" src="mission_chk.js"></scriopt>
 </head>
 <body class="drawer drawer--left drawer--navbarTopGutter">
   <header class="drawer-navbar drawer-navbar--fixed" role="banner">
@@ -103,15 +104,17 @@
     <button class="select">ミッション完了</button>
     </a>
 
-    <!--팝업창-->
+    <!--팝업창(popup)-->
     <div id="modal-window">
         <div class="modal_close"></div>
         <div class="popup"><strong class="strong">関係者!</strong>
         <br><initial class="popup_txt">ミッションを確認してください</initial></div>
+
         <form id="passform" action="">
           <input type="password" class="passwd" id="passwd" value="">
           <input type="submit" class="submit" id="submit" value="はい">
-      </form>
+          <span id="result"></span>
+        </form>
     </div>
   </main>
 
@@ -128,6 +131,6 @@
   <!--팝업창 script-->
   <!--<script type="text/javascript" src="http://jsdo.it/lib/jquery-2.1.0/js"></script>-->
   <script type="text/javascript" src="check.js"></script>
-  <scriopt type="text/javascript" src="mission_chk.js"></scriopt>
+  
 </body>
 </html>
